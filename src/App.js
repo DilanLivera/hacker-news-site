@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Header';
 
 class App extends Component{
   constructor(props) {
@@ -24,7 +25,7 @@ class App extends Component{
   }  
 
   render() {
-    let views = <div>Loading...</div>;
+    let views = <div className="loading">Loading...</div>;
 
     const { stories } = this.state;
     if(stories && stories.length > 0) {
@@ -37,7 +38,7 @@ class App extends Component{
 
     return (
       <div className="App">
-        <h2>Hacker News Top Stories</h2>
+        <Header />
         { views }
       </div>
     );
