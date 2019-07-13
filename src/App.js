@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
+import SortBar from './SortBar';
 
 class App extends Component{
   constructor(props) {
@@ -26,6 +27,7 @@ class App extends Component{
 
   render() {
     let views = <div className="loading">Loading...</div>;
+    let btnList = ["new", "past", "comments", "ask", "show", "jobs", "submit"];
 
     const { stories } = this.state;
     if(stories && stories.length > 0) {
@@ -39,6 +41,7 @@ class App extends Component{
     return (
       <div className="App">
         <Header />
+        <SortBar btnList={btnList}/>
         { views }
       </div>
     );
