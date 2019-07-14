@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ListContainer.css';
+import Article from './Article';
 
 class ListContainer extends Component{
   constructor(props){
@@ -30,9 +31,7 @@ class ListContainer extends Component{
     const { stories } = this.state;
     if(stories && stories.length > 0) {
       views = stories.map( story => (
-        <p key={story.id}>
-          <a href={story.url}>{ story.title }</a> from <strong>{ story.by }</strong>
-        </p>
+        <Article key ={ story.id } story={ story }/>
       ));
     }    
 
