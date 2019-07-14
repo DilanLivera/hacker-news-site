@@ -1,4 +1,4 @@
-.sort-btn-container {
+.btn-container {
   padding: 10px;
   /* border: 2px solid gray; */
   display: flex;
@@ -14,6 +14,6 @@
   cursor: pointer;
 }
 
-.sort-btn:hover {
-  background-color: #FFFEC4;
+.sort-btn:hover {  
+  background-color: #87D37C;
 }
