@@ -7,7 +7,7 @@ const Article = (props) => {
   return (
     <div className="article">
       <p key={ id }>
-        <a href={ url }>{ title }</a> 
+        <a href={ url } target="_blank" rel="noopener noreferrer">{ title }</a> 
         <br></br>
         <em>by</em> <cite ><strong>{ by }</strong></cite>
       </p>
