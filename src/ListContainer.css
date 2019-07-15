@@ -6,7 +6,9 @@
 }
 
 .sort-btn {
+  padding: 5px;
   font-size: 16px;
+  font-weight: bold;
   border-radius: 3px;
   background-color: #83ffcd;
   border: 1px solid grey;
@@ -16,4 +18,12 @@
 
 .sort-btn:hover {  
   background-color: rgb(255, 155, 161);
+}
+
+.sort-btn:focus {
+  outline: none;
+}
+
+.sort-btn:active {
+  transform: scale(0.95);
 }
