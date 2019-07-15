@@ -12,13 +12,12 @@ class App extends Component{
   // }   
 
   render() {
-    let btnList = ["new", "past", "comments", "ask", "show", "jobs", "submit"];
+    let btnList = ["new and top stories", "ask hn stories", "show hn stories", "job hn stories"];
 
     return (
       <div className="App">
         <Header />
         <ListContainer btnList={btnList}/>
-        {/* { views } */}
       </div>
     );
   }  
