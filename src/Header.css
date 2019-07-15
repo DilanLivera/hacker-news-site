@@ -11,7 +11,11 @@
 
 header {  
   margin-top: 10px;
-  background-color: #222;
+  background-color: #999;
+}
+
+.app-header {
+  box-shadow: 6px 6px #222;
 }
 
 .title {
@@ -20,10 +24,10 @@ header {
   font-family: Arvo;
   font-weight: bold;
   text-shadow:
-    -3px -3px 0 #222,
-    3px -3px 0 #222,
-    -3px 3px 0 #222,
-    3px 3px 0 #222,
+    -3px -3px 0 #999,
+    3px -3px 0 #999,
+    -3px 3px 0 #999,
+    3px 3px 0 #999,
     4px 4px 0 #fff,
     5px 5px 0 #fff,
     6px 6px 0 #fff,

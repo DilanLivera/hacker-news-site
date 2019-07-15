@@ -1,5 +1,5 @@
 .btn-container {
-  padding: 10px;
+  padding: 20px 10px;
   /* border: 2px solid gray; */
   display: flex;
   justify-content: space-around;
@@ -8,12 +8,12 @@
 .sort-btn {
   font-size: 16px;
   border-radius: 3px;
-  background-color: #E4F1FE;
+  background-color: #83ffcd;
   border: 1px solid grey;
   box-shadow: 2px 2px #999;
   cursor: pointer;
 }
 
 .sort-btn:hover {  
-  background-color: #87D37C;
+  background-color: rgb(255, 155, 161);
 }
