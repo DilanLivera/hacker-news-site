@@ -5,3 +5,27 @@
   margin-bottom: 10px;
   text-align: left;
 }
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-date {
+  justify-content: left;
+}
+
+.score-comment {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.score {
+  display: inline-block;
+}
+
+.comments {
+  display: inline-block;
+}
