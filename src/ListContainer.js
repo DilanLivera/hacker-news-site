@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './ListContainer.css';
 import Article from './Article';
+import Loading from './Loading';
+import Jokes from './jokes';
 
 class ListContainer extends Component{
   constructor(props){
@@ -49,7 +51,9 @@ class ListContainer extends Component{
 
   render() {
     let btnList = this.props.btnList;
-    let views = <div className="loading">Loading...</div>;
+    let num = Math.floor((Math.random())*Jokes.length);
+    let loadingText = Jokes[num];
+    let views = <Loading loadingText={ loadingText } />;
 
     const { stories } = this.state;
     if(stories && stories.length > 0) {
