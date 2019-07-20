@@ -1,10 +1,10 @@
 .article {
-  padding: 0 10px;
-  border: 2px solid gray;
+  padding: 5px 10px;
+  /* border: 2px solid gray; */
   border-radius: 5px;
   margin-bottom: 10px;
   text-align: left;  
-  box-shadow: 3px 7px 17px 2px rgb(199, 194, 194);
+  box-shadow: 3px 2px 17px 2px rgb(199, 194, 194);
 }
 
 .info-container {
