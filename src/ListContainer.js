@@ -53,7 +53,8 @@ class ListContainer extends Component{
     let btnList = this.props.btnList;
     let num = Math.floor((Math.random())*Jokes.length);
     let loadingText = Jokes[num];
-    let views = <Loading loadingText={ loadingText } />;
+    let loadingTitle = "here's a joke for you, while you wait...";
+    let views = <Loading loadingTitle={ loadingTitle } loadingText={ loadingText } />;
 
     const { stories } = this.state;
     if(stories && stories.length > 0) {
