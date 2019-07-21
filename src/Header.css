@@ -40,3 +40,9 @@ header {
   margin:0;
   text-align: center;
 }
+
+@media all and (max-width: 1080px) {
+  .title {
+    font-size: 60px;
+  }
+}

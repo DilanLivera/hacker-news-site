@@ -7,3 +7,9 @@
 .loading{
   padding-top: 250px;
 }
+
+@media all and (max-width: 1080px) {
+  .App {
+      width: 97%;
+  }
+}
