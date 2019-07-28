@@ -5,6 +5,7 @@ function Header() {
   return (
     <header className="app-header">
       <h1 className='title'>Hacker News</h1>
+      <button className='login-btn'>Login</button>
     </header>
   );
 }
