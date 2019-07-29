@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Switch, BrowserRouter  } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
 import ListContainer from './ListContainer';
@@ -17,9 +18,17 @@ class App extends Component{
 
     return (
       <div className="App">
-        <Header />
-        {/* <ListContainer btnList={btnList}/> */}
-        <Login />
+        <BrowserRouter>
+          <Header />
+          <Switch>
+          <Route exact path='/' component={ Login }/>
+            <Route exact path='/login' component={ Login }/>
+            <Route exact path='/story-list' render={(props) => <ListContainer {...props} btnList={btnList} />} />
+          </Switch>
+        </BrowserRouter>
+
+        {/* <ListContainer btnList={btnList}/>
+        <Login /> */}
       </div>
     );
   }  

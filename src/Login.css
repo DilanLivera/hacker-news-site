@@ -6,7 +6,8 @@
   width: 25%;
   background-color: lightskyblue;
   transform: translateY(40%);
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 6px 6px #222;
 }
 
 .login-form input {
