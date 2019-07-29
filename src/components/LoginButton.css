@@ -1,0 +1,28 @@
+.login-btn-container {
+  display: block;
+}
+
+.login-btn {
+  width: 100px;
+  padding: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: #CBC3FF;
+  border: 1px solid #222;
+  box-shadow: 2px 2px #222;
+  cursor: pointer;
+}
+
+.login-btn:hover {  
+  background-color: rgb(255, 155, 161);
+}
+
+.login-btn:focus {
+  outline: none;
+}
+
+.login-btn:active {
+  transform: scale(0.95);
+}
