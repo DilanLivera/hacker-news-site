@@ -1,16 +1,16 @@
-.login-form {
+.Login-form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding: 5%;
-  width: 25%;
+  width: 275px;
   background-color: lightskyblue;
   transform: translateY(40%);
   border-radius: 20px;
   box-shadow: 6px 6px #222;
 }
 
-.login-form input {
+.Login-form input {
   margin: 0 0 30px 0;
   align-self: center;
   background-color: #f6f6f6;
@@ -27,16 +27,16 @@
   letter-spacing: 1.5px;
 }
 
-.login-form input:placeholder {
+.Login-form input:placeholder {
   color: #cccccc;
 }
 
-.login-form input:focus {
+.Login-form input:focus {
   outline: none;
   background-color: #fff;
 }
 
-.login-form button {
+.Login-form button {
   align-self: center;
   font-size: 1.2rem;
   font-weight: bold;
@@ -50,15 +50,15 @@
   text-transform: uppercase;
 }
 
-.login-form button:hover {  
+.Login-form button:hover {  
   background-color: rgb(255, 155, 161);
 }
 
-.login-form button:active {
+.Login-form button:active {
   transform: scale(0.8);
 }
 
-.login-form button:focus {
+.Login-form button:focus {
   outline: none;
 }
 

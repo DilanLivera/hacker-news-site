@@ -4,12 +4,14 @@ import './Login.css'
 
 function Login() {
   return (
-    <div className='login-form'>
+    <div className='Login-form'>
       <input type="text" placeholder="username"  name="username"/>
       <input type="password" placeholder = "password" name="password"/>
-      <Link to={'./story-list' }>
-        <button>Log in</button>
-      </Link>
+      <div>
+        <Link to={'./story-list' }>
+          <button>Log in</button>
+        </Link>
+      </div>
     </div>
   );
 }
