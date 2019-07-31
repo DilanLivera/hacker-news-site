@@ -4,8 +4,8 @@ import './Header.css';
 
 function Header() {
   return (
-    <header className="app-header">
-      <h1 className='title'>Hacker News</h1>
+    <header className="Header-app-header">
+      <h1 className='Header-title'>Hacker News</h1>
       <LoginButton to="./login"/>
     </header>
   );

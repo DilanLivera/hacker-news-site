@@ -1,8 +1,9 @@
-.login-btn-container {
-  display: block;
+.LoginButton-container {
+  display: inline;
+  align-self: flex-end;
 }
 
-.login-btn {
+.LoginButton-btn {
   width: 100px;
   padding: 5px;
   margin-bottom: 5px;
@@ -15,14 +16,14 @@
   cursor: pointer;
 }
 
-.login-btn:hover {  
+.LoginButton-btn:hover {  
   background-color: rgb(255, 155, 161);
 }
 
-.login-btn:focus {
+.LoginButton-btn:focus {
   outline: none;
 }
 
-.login-btn:active {
+.LoginButton-btn:active {
   transform: scale(0.95);
 }
