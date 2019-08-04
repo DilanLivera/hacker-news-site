@@ -30,3 +30,11 @@
 .comments {
   display: inline-block;
 }
+
+.comment-icon:hover {
+  cursor: pointer;
+}
+
+/* .comment-icon:active {
+  font-size: 1.1em;
+} */

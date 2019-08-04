@@ -1,0 +1,24 @@
+.Comment-tip {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: transparent;
+  border: 5px solid black;
+  top: 0px;
+  left: -13px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;  
+}
+
+.Comment{
+  position: relative;
+  height: auto;
+  margin: 20px 10px;
+  padding: 5px;
+  border: 2px solid black;
+  min-height: 30px;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 1.5;
+}
