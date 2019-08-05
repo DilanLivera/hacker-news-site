@@ -1,3 +1,9 @@
+.Comment-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .Comment-tip {
   width: 0px;
   height: 0px;
@@ -14,11 +20,14 @@
 .Comment{
   position: relative;
   height: auto;
-  margin: 20px 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
   padding: 5px;
   border: 2px solid black;
   min-height: 30px;
   border-radius: 3px;
   font-size: 14px;
   line-height: 1.5;
+  width: 70%;
+  text-align: justify;
 }

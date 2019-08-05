@@ -6,7 +6,8 @@ class Article extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      commentList: []
+      commentList: [],
+      commentsHidden: true
     }
     this.showComments = this.showComments.bind(this);
   }
@@ -15,24 +16,34 @@ class Article extends Component {
     const storyUrlBase = 'https://hacker-news.firebaseio.com/v0/item/';
     let { kids }  =  this.props.story;
     let url;
+    let { commentsHidden, commentList } = this.state;
 
-    Promise.all(kids.map(id => {
+    //only get comments if the commetList is empty, otherwise change commentsHidden
+    if(commentList.length === 0){
+      commentsHidden = false;
+
+      Promise.all(kids.map(id => {
         url = `${storyUrlBase}${id}.json`;
         return fetch(url).then( data => data.json())
       }))
       .then(response => Promise.all( response))
-      .then(result => {
-          let commentList = result.map(comment => {
+      .then(comments => {
+          let commentList = comments.map(comment => {
             const { by, id, text, time } =  comment;
             return <Comment key={ id } by={ by } text={ text } time={ time } />;
           });
-          this.setState({ commentList });
+          this.setState({ commentList, commentsHidden });
       });
+    } else {
+      commentsHidden = !commentsHidden;
+      this.setState({ commentsHidden });
+    }
   }
 
   render() {
     let { id, url, title, by , descendants, time, score } = this.props.story;
     let formatedTime = new Date(time*1000).toDateString();
+    let { commentsHidden} = this.state;
 
     return (
       <div className="article">
@@ -48,9 +59,14 @@ class Article extends Component {
             <p className="comments"><span className="comment-icon" role="img" aria-label="comments" aria-labelledby="dilan-livera" onClick={ this.showComments }>💬</span> { descendants }</p>
           </div>
         </div>
-        <div>
-          { this.state.commentList }
-        </div>       
+        {
+          (!commentsHidden) 
+            ? <div>
+                <hr></hr>
+                { this.state.commentList }
+              </div>
+            : ""
+        }
       </div>
     );
   }
