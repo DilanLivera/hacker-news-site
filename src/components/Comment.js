@@ -4,10 +4,10 @@ import './Comment.css';
 class Comment extends Component {
   render() {
     let { by, text, time } = this.props;
-
+    
     return (
       <div className="Comment-container">
-        <div>
+        <div className="Comment-user-time">
           <em>by</em> <cite ><strong>{ by } </strong>on<strong> { time }</strong></cite>
         </div>
         <div className="Comment">

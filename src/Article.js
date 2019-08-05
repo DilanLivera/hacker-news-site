@@ -30,7 +30,9 @@ class Article extends Component {
       .then(comments => {
           let commentList = comments.map(comment => {
             const { by, id, text, time } =  comment;
-            return <Comment key={ id } by={ by } text={ text } time={ time } />;
+            let formatedTime = new Date(time*1000).toDateString();
+
+            return <Comment key={ id } by={ by } text={ text } time={ formatedTime } />;
           });
           this.setState({ commentList, commentsHidden });
       });

@@ -17,6 +17,10 @@
   border-bottom-color: transparent;  
 }
 
+.Comment-user-time {
+  font-size: 14px;
+}
+
 .Comment{
   position: relative;
   height: auto;
