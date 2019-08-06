@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactHtmlParser from 'react-html-parser';
 import './Comment.css';
 
 class Comment extends Component {
@@ -8,11 +9,12 @@ class Comment extends Component {
     return (
       <div className="Comment-container">
         <div className="Comment-user-time">
-          <em>by</em> <cite ><strong>{ by } </strong>on<strong> { time }</strong></cite>
+        <cite><em>by </em><strong>{ by } </strong><br />
+        on<strong> { time }</strong></cite>
         </div>
         <div className="Comment">
           <span className="Comment-tip"></span>
-          { text }
+          { ReactHtmlParser(text) }
         </div>
       </div>
     );
