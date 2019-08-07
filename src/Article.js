@@ -19,7 +19,7 @@ class Article extends Component {
     let { commentsHidden, commentList } = this.state;
 
     //only get comments if the commetList is empty, otherwise change commentsHidden
-    if(commentList.length === 0){
+    if(kids && commentList.length === 0){
       commentsHidden = false;
 
       Promise.all(kids.map(id => {
@@ -37,7 +37,8 @@ class Article extends Component {
           this.setState({ commentList, commentsHidden });
       });
     } else {
-      commentsHidden = !commentsHidden;
+      //only show or hide comments if there are any comments
+      commentsHidden = (kids) ? !commentsHidden : true;
       this.setState({ commentsHidden });
     }
   }
