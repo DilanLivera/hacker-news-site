@@ -35,3 +35,13 @@
   width: 80%;
   text-align: justify;
 }
+
+.Comment-showreplys-btn {
+  all: unset;
+  font-weight: bold; 
+}
+
+.Comment-showreplys-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}

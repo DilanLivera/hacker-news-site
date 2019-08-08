@@ -29,10 +29,10 @@ class Article extends Component {
       .then(response => Promise.all( response))
       .then(comments => {
           let commentList = comments.map(comment => {
-            const { by, id, text, time } =  comment;
+            const { by, id, text, time, kids } =  comment;
             let formatedTime = new Date(time*1000).toDateString();
 
-            return <Comment key={ id } by={ by } text={ text } time={ formatedTime } />;
+            return <Comment key={ id } by={ by } text={ text } time={ formatedTime } kids={ kids } />;
           });
           this.setState({ commentList, commentsHidden });
       });
