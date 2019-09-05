@@ -27,3 +27,8 @@
 .sort-btn:active {
   transform: scale(0.95);
 }
+
+.list-container ul {
+  display: flex;
+  justify-content: center;
+}

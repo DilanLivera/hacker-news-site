@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import { fetchComments } from '../helpers'
 import './Comment.css';
 
 class Comment extends Component {
+  static defaultProps = {
+    storyUrlBase: 'https://hacker-news.firebaseio.com/v0/item/'
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -12,24 +15,24 @@ class Comment extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  async getComments(id) {
+    const { storyUrlBase } = this.props;
+    let url = `${storyUrlBase}${id}.json`;
+    let comment = await fetch(url).then( data => data.json());
+    return comment;
+  } 
+
   showReplys() {
     const { kids } = this.props;
     let replys = [];
 
-    if(kids && replys.length === 0){
-      const storyUrlBase = 'https://hacker-news.firebaseio.com/v0/item/';
-      let url;
-    
-      Promise.all(kids.map(id => {
-        url = `${storyUrlBase}${id}.json`;
-        return fetch(url).then( data => data.json())
-      }))
-      .then(response => Promise.all( response))
+    if(kids && replys.length === 0){    
+      Promise.all(kids.map(id => this.getComments(id)))
       .then(comments => {
         replys = comments.map(comment => {
           const { by, id, text, time, kids } =  comment;
           let formatedTime = new Date(time*1000).toDateString();
-  
+
           return <Comment key={ id } by={ by } text={ text } time={ formatedTime } kids={ kids } />;
         });
         this.setState({ replys });
