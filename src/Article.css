@@ -3,8 +3,13 @@
   /* border: 2px solid gray; */
   border-radius: 5px;
   margin-bottom: 10px;
-  text-align: left;  
+  text-align: left;
   box-shadow: 3px 2px 17px 2px rgb(199, 194, 194);
+}
+
+.article-title {
+  color: dodgerblue;
+  cursor: pointer;
 }
 
 .info-container {
